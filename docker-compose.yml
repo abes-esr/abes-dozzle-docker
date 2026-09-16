@@ -1,0 +1,13 @@
+services:
+  dozzle:
+    container_name: docker-dozzle
+    image: amir20/dozzle:latest
+    restart: unless-stopped
+    mem_limit: ${DOZZLE_MEM_LIMIT}
+    memswap_limit: ${DOZZLE_MEMSWAP_LIMIT}
+    cpus: ${DOZZLE_CPU_LIMIT}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 29999:8080
+      - 2375:2375
