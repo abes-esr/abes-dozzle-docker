@@ -9,7 +9,7 @@ Ce déploiement utilise des variables pour limiter les ressources allouées au c
 
 1. Clonez ce dépôt.
 
-2. Utilisez le fichier `.env-dist` mis à disposition ; il contient les variables utiles au bon fonctionnement du container.
+2. Utilisez le fichier `.env-dist` mis à disposition ; il contient les variables utiles au bon fonctionnement du conteneur.
 ```bash
 ## Resources allocation
 DOZZLE_MEM_LIMIT=5g
