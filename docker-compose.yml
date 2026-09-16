@@ -1,6 +1,6 @@
 services:
   dozzle:
-    container_name: docker-dozzle
+    container_name: abes-docker-dozzle
     image: amir20/dozzle:latest
     restart: unless-stopped
     mem_limit: ${DOZZLE_MEM_LIMIT}
