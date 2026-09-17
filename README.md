@@ -36,7 +36,7 @@ Le fichier `docker-compose.yml` configure les éléments clés suivants :
 * **Accès au socket Docker :** Le volume `/var/run/docker.sock` permet à Dozzle de détecter automatiquement tous les autres conteneurs présents sur l'hôte et de lire leurs logs en temps réel.
 * **Ports exposés :**
 * `DOZZLE_PORT_WEB:8080` : Port principal pour accéder au tableau de bord web.
-* `2375:2375` : Port exposé pour la communication avec des démons Docker distants (si nécessaire).
+* `DOZZLE_PORT_DOCKER_DAEMON:2375` : Port exposé pour la communication avec des démons Docker distants (si nécessaire).
 
 ---
 
