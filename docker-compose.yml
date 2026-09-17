@@ -1,7 +1,7 @@
 services:
   dozzle:
     container_name: abes-docker-dozzle
-    image: amir20/dozzle:latest
+    image: amir20/dozzle:v11.1.0-alpine
     restart: unless-stopped
     mem_limit: ${DOZZLE_MEM_LIMIT}
     memswap_limit: ${DOZZLE_MEMSWAP_LIMIT}
@@ -9,5 +9,5 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
-      - 29999:8080
-      - 2375:2375
+      - ${DOZZLE_PORT_WEB}:8080
+      - ${DOZZLE_PORT_DOCKER_DAEMON}:2375
