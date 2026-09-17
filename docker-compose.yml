@@ -12,5 +12,5 @@ services:
     ports:
       - ${DOZZLE_PORT_WEB}:8080
       - ${DOZZLE_PORT_DOCKER_DAEMON}:2375
-    volumes:
-      dozzle_data:
+volumes:
+  dozzle_data:
