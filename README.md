@@ -15,6 +15,7 @@ Ce déploiement utilise des variables pour limiter les ressources allouées au c
 DOZZLE_MEM_LIMIT=5g
 DOZZLE_MEMSWAP_LIMIT=5g
 DOZZLE_CPU_LIMIT=5
+DOZZLE_PORT_WEB=8080
 ``` 
 
 ### 3. Lancement
@@ -23,7 +24,7 @@ Démarrez le service en arrière-plan à l'aide de Docker Compose :
 docker compose up -d
 ```
 
-L'interface web de Dozzle est accessible à l'adresse `http://localhost:29999` ou via l'IP de votre serveur en cas de déploiement. 
+L'interface web de Dozzle est accessible à l'adresse `http://localhost:DOZZLE_PORT_WEB` ou via l'IP de votre serveur en cas de déploiement. 
 
 ---
 
@@ -33,7 +34,7 @@ Le fichier `docker-compose.yml` configure les éléments clés suivants :
 
 * **Accès au socket Docker :** Le volume `/var/run/docker.sock` permet à Dozzle de détecter automatiquement tous les autres conteneurs présents sur l'hôte et de lire leurs logs en temps réel.
 * **Ports exposés :**
-* `29999:8080` : Port principal pour accéder au tableau de bord web.
+* `DOZZLE_PORT_WEB:8080` : Port principal pour accéder au tableau de bord web.
 * `2375:2375` : Port exposé pour la communication avec des démons Docker distants (si nécessaire).
 
 ---
